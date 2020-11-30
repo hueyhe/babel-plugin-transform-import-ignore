@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-import-ignore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A babel transform plugin to ignore imports that do not work in node environment.",
   "main": "dist/index.js",
   "scripts": {
