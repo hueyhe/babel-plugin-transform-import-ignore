@@ -1,0 +1,25 @@
+{
+  "name": "babel-plugin-transform-import-ignore",
+  "version": "1.0.0",
+  "description": "A babel transform plugin to ignore imports that do not work in node environment.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src/ --out-dir dist/",
+    "prepare": "yarn test && yarn build"
+  },
+  "repository": "git@github.com:hueyhe/babel-plugin-transform-import-ignore.git",
+  "author": "sihonghehuey@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "babel-plugin"
+  ],
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
+}
