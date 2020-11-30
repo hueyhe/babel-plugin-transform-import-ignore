@@ -13,6 +13,8 @@ import defaultExport2, { export7 } from 'module-name';
 import defaultExport3, * as defaultName from 'module-name';
 import 'module-name';
 
+import './a/very/long/path/to/the/style.ext';
+
 import('./path/to/style.css').then(() => {});
 
 require('./path/to/style.css');
@@ -31,7 +33,7 @@ it('works', () => {
       [
         plugin,
         {
-          patterns: [/\.s?css$/, 'module-name'],
+          patterns: [/\.s?css$/, 'module-name', './a/very/long/*/style.ext'],
         },
       ]
     ],

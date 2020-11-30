@@ -10,7 +10,7 @@ $ yarn add babel-plugin-transform-import-ignore --dev
 
 ## Usage
 
-Configure the plguin in your babel configuration file and specify the import paths that you want to ignore.
+Configure the plguin in your babel configuration file and specify the import paths that you want to ignore. Wildcard identifier `*` is supported.
 
 ```.babalrc
 {
@@ -18,7 +18,7 @@ Configure the plguin in your babel configuration file and specify the import pat
     [
       "babel-plugin-transform-import-ignore",
       {
-        "patterns": [".css", ".scss"]
+        "patterns": [".css", ".scss", "wildcard/*/match.css"]
       }
     ]
   ]

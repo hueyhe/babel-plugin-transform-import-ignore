@@ -6,6 +6,11 @@ function escapeRegExp(string) {
   return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
+function buildRegExp(string) {
+  const rule = string.split('*').map(escapeRegExp).join('.*');
+  return new RegExp(rule);
+}
+
 export default function () {
   function cleanseInput(patterns) {
     if (!patterns || !Array.isArray(patterns) || !patterns.length) {
@@ -21,7 +26,7 @@ export default function () {
         throw new Error(`Invalid pattern '${pattern}'. A pattern should be either a string or a regular expression.`);
       }
       if (isString) {
-        pattern = new RegExp(escapeRegExp(pattern));
+        pattern = buildRegExp(pattern);
       }
       cleansed.push(pattern);
     }
